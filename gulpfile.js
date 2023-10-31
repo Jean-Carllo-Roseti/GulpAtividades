@@ -3,28 +3,15 @@ const sass = require ('gulp-sass')(require('sass'));
 const sourcemaps = require ('gulp-sourcemaps');
 const uglify = require ('gulp-uglify');
 const imageMin = require ('gulp-imagemin');
-const somando = require('./source/scripts/funcoes');
+const dividir = require('./source/scripts/funcoes');
+const soPar = require('./source/scripts/funcoes');
 
-
-function xx (callback) {
-    console.log('testezinho.')
+function xau (callback){
+    console.log('opaaaaa!');
+    dividir(10, 2);
+    soPar(3, 16);
     callback();
 }
-
-function ola () {
-    console.log('saudação exibidas.')
-    xx();
-}
-
-console.log('soma: ', somando(2, 8));
-
-function equacoes (a, b) {
-    return( a / b);
-}
-
-console.log('divisão ', equacoes(6, 3));
-
-
 
 function comprimeImagens () {
     return gulp.src('./source/images/*')
@@ -56,7 +43,5 @@ exports.watch = function () {
 
 exports.javaScript = comprimeJS;
 exports.retrato = comprimeImagens;
-exports.teste = somando;
-exports.contas = equacoes;
-exports.ola = ola;
-exports.xx = xx;
+exports.xau = xau;
+

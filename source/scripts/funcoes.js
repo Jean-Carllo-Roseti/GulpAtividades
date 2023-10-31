@@ -1,26 +1,21 @@
-function somando (a, b) {
-    return a + b;
+
+function dividir (a, b) {
+    return a / b;
 }
 
-function saudacao (callback) {
-    return (console.log('Bom dia a tds.'))
-    (callback);
+function xau (){
+    console.log('xau!');
 }
 
-function xx (callback) {
-    console.log('testezinho.')
-    callback();
+function soPar (incio, fim) {
+    for(let i = incio; i <= fim; i++) {
+        if (i % 2 === 0) {
+            console.log('este numero: ', i, (' é par.'))
+        } else {
+            console.log('este numero: ', i, (' é impar.'))
+        }
+    }
 }
 
-function ola () {
-    console.log('saudação exibidas.')
-    xx();
-}
-
-module.exports = somando;
-module.exports = saudacao;
-exports.xx = xx;
-exports.ola = ola;
-
-
-
+module.exports = dividir;
+module.exports = soPar;
